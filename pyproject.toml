@@ -1,0 +1,11 @@
+[project]
+name = "time_series_buffer"
+version = "0.1.0"
+authors = [{ name = "Valentin Yuryev", email = "valentin.yuryev@gmail.com" }]
+maintainers = [
+    { name = "Valentin Yuryev", email = "valentin.yuryev@gmail.com" },
+]
+description = "Time series buffer for handling temporal data"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["torch"]
