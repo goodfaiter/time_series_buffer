@@ -20,6 +20,6 @@ class TimeSeriesBuffer:
         adjusted_indices = (self.indices.unsqueeze(0) + self.write_indices.unsqueeze(1)) % self.max_size
         return self.buffer[self.batch_indices.unsqueeze(1), adjusted_indices, :]
 
-    def reset(self, reset_mask: torch.Tensor):
+    def reset_idx(self, reset_mask: torch.Tensor):
         self.buffer[reset_mask, :, :] = 0.0
         self.write_indices[reset_mask] = 0
